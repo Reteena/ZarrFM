@@ -1,8 +1,9 @@
 # ZarrFM
 
-ZarrFM is an execution-oriented storage layer for large-scale EEG corpora. It complements BIDS by storing a corpus as a single [Zarr](https://zarr.dev/) v3 hierarchy with indexed metadata, canonical channel spaces, explicit masks, hash-stable subject splits, verified event tables, and block-aligned sharding.
+ZarrFM is an execution-oriented storage layer for EEG Foundation-Model Pretraining that complements BIDS by storing a corpus as a single [Zarr](https://zarr.dev) v3 hierarchy with indexed metadata, canonical channel spaces, explicit masks, hash-stable subject splits, verified event tables, and block-aligned shading. 
 
-On real PhysioNet recordings and synthetic corpora, ZarrFM is compared with EDF, FIF, NPY, HDF5, and Parquet. Across 200 recordings, its two-level index reduces pretraining queries from 601 requests to 14. Preserving native signal codes reduces storage from 42.4 MB/hour in EDF to 22.7 MB/hour, while block-aligned sampling reaches about 3,100 windows/s (up to 11x faster than Parquet). Reads remain bit-identical across independent Zarr implementations, and concurrent failure-injected appends recover without data loss.
+On real PhysioNet recordings and synthetic corpora, we compare ZarrFM with EDF, FIF, NPY, HDF5, and Parquet. Across 200 recordings, its two-level index reduces pretraining queries from 601 requests to 14. Preserving native signal codes reduces storage from 42.4 MB/hour in EDF to 22.7 MB/hour, while block-aligned sampling reaches 3, 100 windows/s, up to 11x faster than Parquet. Reads remain bit-identical across independent Zarr implementations, and concurrent failure-injected appends recover without data loss.
+
 
 ## Version
 
